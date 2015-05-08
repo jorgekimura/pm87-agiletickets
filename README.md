@@ -1,6 +1,6 @@
 Agile Tickets
 =============
-
+Desenvolvedor principal: Jorge Yoshiro Kimura
 Começando a desenvolver
 -----------------------
 
