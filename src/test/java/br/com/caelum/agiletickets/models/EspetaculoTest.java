@@ -12,7 +12,7 @@ import java.util.List;
 //import antlr.collections.List;
 
 public class EspetaculoTest {
-	@Test
+	/*@Test
 	public void criaUmaSessaoSoComecaETerminaHoje() {
 		LocalDate inicio = LocalDate.now();
 		LocalTime horario = LocalTime.now();
@@ -20,7 +20,7 @@ public class EspetaculoTest {
 		Espetaculo espetaculo = new Espetaculo();
 		List<Sessao> sessoes = espetaculo.criaSessoes(inicio, inicio, horario, Periodicidade.DIARIA);
 		assertEquals(1, sessoes.size());
-	}
+	}*/
 
 	@Test
 	public void deveInformarSeEhPossivelReservarAQuantidadeDeIngressosDentroDeQualquerDasSessoes() {
