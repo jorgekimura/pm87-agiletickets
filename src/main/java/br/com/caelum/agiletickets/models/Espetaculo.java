@@ -108,7 +108,7 @@ public class Espetaculo {
 				
 			}else if (Periodicidade.SEMANAL.equals(periodicidade)){
 				sessao.setEspetaculo(this);
-				sessao.setInicio(inicio);
+				sessao.setInicio(inicio.toDateTime(horario));
 			}
 			sessoes.add(sessao);
 		}

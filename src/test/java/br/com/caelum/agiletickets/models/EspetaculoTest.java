@@ -7,14 +7,18 @@ import static org.junit.Assert.assertEquals;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 import org.junit.Test;
+import java.util.List;
 
-import antlr.collections.List;
+//import antlr.collections.List;
 
 public class EspetaculoTest {
 	@Test
-	public void criaUmaSessaoSoComecaETerminaHoje() throws Exception {
+	public void criaUmaSessaoSoComecaETerminaHoje() {
+		LocalDate inicio = LocalDate.now();
+		LocalTime horario = LocalTime.now();
+		
 		Espetaculo espetaculo = new Espetaculo();
-		List sessoes = (List) espetaculo.criaSessoes(LocalDate.now(), LocalDate.now(), LocalTime.now(), Periodicidade.DIARIA);
+		List<Sessao> sessoes = espetaculo.criaSessoes(inicio, inicio, horario, Periodicidade.DIARIA);
 		assertEquals(1, sessoes.size());
 	}
 
