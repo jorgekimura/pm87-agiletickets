@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.joda.time.Days;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 
@@ -98,6 +99,19 @@ public class Espetaculo {
      */
 	public List<Sessao> criaSessoes(LocalDate inicio, LocalDate fim, LocalTime horario, Periodicidade periodicidade) {
 		// ALUNO: Não apague esse metodo. Esse sim será usado no futuro! ;)
+		int quantidadeDias = Days.daysBetween(inicio, fim).getDays();
+		Sessao sessao = new Sessao();
+		for (int i = 0; i > quantidadeDias;i++){
+			if(Periodicidade.DIARIA.equals(periodicidade)){
+				sessao.setEspetaculo(this);
+				sessao.setInicio(inicio.toDateTime(horario));
+				
+			}else if (Periodicidade.SEMANAL.equals(periodicidade)){
+				sessao.setEspetaculo(this);
+				sessao.setInicio(inicio);
+			}
+			sessoes.add(sessao);
+		}
 		return null;
 	}
 	

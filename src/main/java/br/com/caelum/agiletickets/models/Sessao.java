@@ -13,6 +13,8 @@ import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 
+import br.com.caelum.agiletickets.controllers.EspetaculosController;
+
 @Entity
 public class Sessao {
 
@@ -119,6 +121,11 @@ public class Sessao {
 
 	public BigDecimal getPreco() {
 		return preco;
+	}
+
+	public void setEspetaculo(EspetaculosController espetaculosController) {
+		// TODO Auto-generated method stub
+		this.espetaculo = espetaculo;
 	}
 	
 }

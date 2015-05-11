@@ -75,4 +75,7 @@ public class EstabelecimentoTest {
 		estabelecimentos.ultimaLinhaDeveTerEstacionamento(false);
 	}
 	
+	
+	
+	
 }

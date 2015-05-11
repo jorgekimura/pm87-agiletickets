@@ -2,10 +2,21 @@ package br.com.caelum.agiletickets.models;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
+import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 import org.junit.Test;
 
+import antlr.collections.List;
+
 public class EspetaculoTest {
+	@Test
+	public void criaUmaSessaoSoComecaETerminaHoje() throws Exception {
+		Espetaculo espetaculo = new Espetaculo();
+		List sessoes = (List) espetaculo.criaSessoes(LocalDate.now(), LocalDate.now(), LocalTime.now(), Periodicidade.DIARIA);
+		assertEquals(1, sessoes.size());
+	}
 
 	@Test
 	public void deveInformarSeEhPossivelReservarAQuantidadeDeIngressosDentroDeQualquerDasSessoes() {
